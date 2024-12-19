@@ -40,14 +40,14 @@ fi
 # Download Perseus
 if [ ! -d "Perseus" ]; then
     echo "Downloading Perseus"
-    git clone https://github.com/Egoistically/Perseus
+    git clone https://github.com/IceEst/Azurlane_libSkin
 fi
 
 echo "Decompile Azur Lane apk"
 java -jar apktool.jar -q -f d com.bilibili.AzurLane.apk
 
 echo "Copy Perseus libs"
-cp -r Perseus/. com.bilibili.AzurLane/lib/
+cp -r Azurlane_libSkin/. com.bilibili.AzurLane/lib/
 
 echo "Patching Azur Lane with Perseus"
 oncreate=$(grep -n -m 1 'onCreate' com.bilibili.AzurLane/smali_classes2/com/unity3d/player/UnityPlayerActivity.smali | sed  's/[0-9]*\:\(.*\)/\1/')
