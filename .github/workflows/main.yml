@@ -15,9 +15,6 @@ jobs:
         with:
           java-version: "17"
           distribution: "adopt"
-      
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
 
       - name: Build Perseus APK
         run: ./patch_perseus.sh
