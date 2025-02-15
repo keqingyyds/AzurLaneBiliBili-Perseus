@@ -29,7 +29,7 @@ if [ ! -f "com.bilibili.AzurLane.apk" ]; then
 
     # eg: wget "your download link" -O "your packge name.apk" -q
     #if you want to patch .xapk, change the suffix here to wget "your download link" -O "your packge name.xapk" -q
-    wget https://github.com/keqingyyds/AzurLaneBiliBili-Perseus/releases/download/latest/blhx_8.2.1_0820_1_20240830_041443_51682.apk -O com.bilibili.AzurLane.apk -q
+    wget https://github.com/keqingyyds/AzurLaneBiliBili-Perseus/releases/download/latest/com.bilibili.AzurLane.patched.apk -O com.bilibili.AzurLane.apk -q
     echo "apk downloaded !"
     
     # if you can only download .xapk file uncomment 2 lines below. (delete the '#')
@@ -40,7 +40,7 @@ fi
 # Download Perseus
 if [ ! -d "Perseus" ]; then
     echo "Downloading Perseus"
-    git clone https://github.com/IceEst/Azurlane_libSkin
+    git clone https://github.com/Egoistically/Perseus
 fi
 
 echo "Decompile Azur Lane apk"
